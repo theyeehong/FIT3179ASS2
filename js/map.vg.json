@@ -23,7 +23,7 @@
       }
     }
   ],
-  "mark": { "type": "geoshape" },
+  "mark": { "type": "geoshape", "stroke": "black", "strokeWidth": 0.5 },
   "encoding": {
     "color": {
       "field": "Digital Inclusion Index",
