@@ -5,8 +5,8 @@
     "height": 800,
     "projection": {"type": "equalEarth"},
     "data": {
-        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json",
-        "format": {"type": "topojson", "feature": "ne_10m"}
+        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json" ,
+        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
     },
     "transform": [
         {
