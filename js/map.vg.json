@@ -65,12 +65,28 @@
           "filter": "datum['Digital Inclusion Index'] != null"
         }
       ],
-      "mark": { "type": "text", "fontSize": 10, "fontWeight": "bold", "color": "black" },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "black"
+      },
       "encoding": {
         "text": { "field": "properties.name", "type": "nominal" },
         "longitude": { "field": "properties.longitude" },
         "latitude": { "field": "properties.latitude" }
       }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_graticules_10"
+        }
+      },
+      "mark": { "type": "geoshape", "stroke": "grey"},
+      "encoding": {}
     }
   ]
 }
