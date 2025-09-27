@@ -26,11 +26,10 @@
             "field": "Digital Inclusion Index",
             "type": "quantitative",
             "scale": {"scheme": "blues"}
-        }
-    },
-    "tooltip": [
-        {"field": "properties.NAME", "title": "State"},
-        {"field": "Digital Inclusion Index", "type": "quantitative"}
-    ]
+        },
+        "tooltip": [
+            {"field": "properties.NAME", "title": "State"},
+            {"field": "Digital Inclusion Index", "type": "quantitative"}
+        ]
+    }
 }
-
