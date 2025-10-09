@@ -1,8 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Australian Digital Inclusion Map",
-  "width": 450,
-  "height": 400,
+  "width": 900,
+  "height": 800,
+  "params": [
+    {
+      "name": "YearSelection",
+      "value": 2014,
+      "bind": {
+        "input": "range",
+        "min": 2014,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
   "projection": { "type": "equirectangular" },
   "layer": [
     {
@@ -13,32 +26,50 @@
           "feature": "ne_10m_admin_1_states_provinces"
         }
       },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "tooltip": { "field": "properties.name", "title": "State" }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/data/dgiByStates.csv"
+      },
       "transform": [
         {
-          "lookup": "properties.name",
+          "lookup": "State",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/data/dgiByStates.csv"
+              "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_10m_admin_1_states_provinces"
+              }
             },
-            "key": "State",
-            "fields": ["Digital Inclusion Index"]
-          }
+            "key": "properties.name"
+          },
+          "as": "geo"
         },
-        {
-          "filter": "datum['Digital Inclusion Index'] != null"
-        }
+        { "filter": "datum.Year == YearSelection" }
       ],
-      "mark": { "type": "geoshape", "stroke": "black", "strokeWidth": 0.5 },
+      "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
       "encoding": {
+        "shape": { "field": "geo", "type": "geojson" },
         "color": {
           "field": "Digital Inclusion Index",
           "type": "quantitative",
-          "scale": { "type": "linear" },
+          "scale": { "domain": [46, 70], "scheme": "blues" },
           "legend": { "gradientLength": 350, "gradientThickness": 15 }
         },
         "tooltip": [
-          { "field": "properties.name", "title": "State" },
-          { "field": "Digital Inclusion Index", "type": "quantitative" }
+          { "field": "State", "title": "State" },
+          { "field": "Digital Inclusion Index", "title": "Index" },
+          { "field": "year", "title": "Year" }
         ]
       }
     },
@@ -61,13 +92,11 @@
             "fields": ["Digital Inclusion Index"]
           }
         },
-        {
-          "filter": "datum['Digital Inclusion Index'] != null"
-        }
+        { "filter": "datum['Digital Inclusion Index'] != null" }
       ],
       "mark": {
         "type": "text",
-        "fontSize": 10,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "black"
       },
@@ -85,7 +114,7 @@
           "feature": "ne_10m_graticules_10"
         }
       },
-      "mark": { "type": "geoshape", "stroke": "grey"},
+      "mark": { "type": "geoshape", "stroke": "grey" },
       "encoding": {}
     }
   ]
