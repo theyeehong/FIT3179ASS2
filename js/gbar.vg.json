@@ -1,11 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Digital Inclusion Index by Metric (Australia 2020)",
+  "title": {
+    "text": "Digital Inclusion Index by Metric",
+    "subtitle": {"signal": "YearSelection"}
+  },
   "width": 450,
   "height": 200,
+  "params": [
+    {
+      "name": "YearSelection",
+      "value": 2014
+    }
+  ],
   "data": {
     "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/gbarData.csv"
   },
+  "transform": [{ "filter": "datum.Year == YearSelection" }],
   "layer": [
     {
       "selection": {
@@ -18,9 +28,19 @@
       "mark": "bar",
       "encoding": {
         "x": { "field": "Metric", "axis": { "labelAngle": 0 } },
-        "y": { "field": "Score", "type": "quantitative", "scale": { "domain": [0, 100] } },
+        "y": {
+          "field": "Score",
+          "type": "quantitative",
+          "scale": { "domain": [0, 100] }
+        },
         "xOffset": { "field": "State" },
         "color": { "field": "State" },
+        "tooltip": [
+          { "field": "State", "title": "State" },
+          { "field": "Metric", "title": "Metric" },
+          { "field": "Score", "title": "Score", "format": ".1f" },
+          { "field": "Year", "title": "Year" }
+        ],
         "opacity": {
           "condition": { "selection": "StateHighlight", "value": 1 },
           "value": 0.1

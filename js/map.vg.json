@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Australian Digital Inclusion Map",
-  "width": 1300,
+  "width": 1000,
   "height": 595,
   "params": [
     {
@@ -57,7 +57,7 @@
           "field": "Digital Inclusion Index",
           "type": "quantitative",
           "scale": { "domain": [46, 70], "scheme": "blues" },
-          "legend": { "gradientLength": 550, "gradientThickness": 15 }
+          "legend": { "gradientLength": 580, "gradientThickness": 15 }
         },
         "tooltip": [
           { "field": "State", "title": "State" },
