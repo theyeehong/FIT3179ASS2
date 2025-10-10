@@ -1,33 +1,225 @@
-State,Metric,Score
-New South Wales,Access,76.4
-New South Wales,Affordability,61.7
-New South Wales,Digital Ability,52.5
-New South Wales,Digital Inclusion Index,63.5
-Victoria,Access,76.3
-Victoria,Affordability,60.7
-Victoria,Digital Ability,52.2
-Victoria,Digital Inclusion Index,63.1
-Queensland,Access,76.1
-Queensland,Affordability,59.7
-Queensland,Digital Ability,50.7
-Queensland,Digital Inclusion Index,62.2
-South Australia,Access,75.3
-South Australia,Affordability,59.5
-South Australia,Digital Ability,51.0
-South Australia,Digital Inclusion Index,61.9
-Western Australia,Access,77.5
-Western Australia,Affordability,61.5
-Western Australia,Digital Ability,53.4
-Western Australia,Digital Inclusion Index,64.1
-Tasmania,Access,74.0
-Tasmania,Affordability,57.9
-Tasmania,Digital Ability,47.1
-Tasmania,Digital Inclusion Index,59.6
-Australian Capital Territory,Access,77.0
-Australian Capital Territory,Affordability,69.9
-Australian Capital Territory,Digital Ability,55.7
-Australian Capital Territory,Digital Inclusion Index,67.5
-Northern Territory,Access,71.0
-Northern Territory,Affordability,54.9
-Northern Territory,Digital Ability,46.5
-Northern Territory,Digital Inclusion Index,57.5
+State,Metric,Score,Year
+New South Wales,Access,76.4,2020
+New South Wales,Affordability,61.7,2020
+New South Wales,Digital Ability,52.5,2020
+New South Wales,Digital Inclusion Index,63.5,2020
+Victoria,Access,76.3,2020
+Victoria,Affordability,60.7,2020
+Victoria,Digital Ability,52.2,2020
+Victoria,Digital Inclusion Index,63.1,2020
+Queensland,Access,76.1,2020
+Queensland,Affordability,59.7,2020
+Queensland,Digital Ability,50.7,2020
+Queensland,Digital Inclusion Index,62.2,2020
+South Australia,Access,75.3,2020
+South Australia,Affordability,59.5,2020
+South Australia,Digital Ability,51.0,2020
+South Australia,Digital Inclusion Index,61.9,2020
+Western Australia,Access,77.5,2020
+Western Australia,Affordability,61.5,2020
+Western Australia,Digital Ability,53.4,2020
+Western Australia,Digital Inclusion Index,64.1,2020
+Tasmania,Access,74.0,2020
+Tasmania,Affordability,57.9,2020
+Tasmania,Digital Ability,47.1,2020
+Tasmania,Digital Inclusion Index,59.6,2020
+Australian Capital Territory,Access,77.0,2020
+Australian Capital Territory,Affordability,69.9,2020
+Australian Capital Territory,Digital Ability,55.7,2020
+Australian Capital Territory,Digital Inclusion Index,67.5,2020
+Northern Territory,Access,71.0,2020
+Northern Territory,Affordability,54.9,2020
+Northern Territory,Digital Ability,46.5,2020
+Northern Territory,Digital Inclusion Index,57.5,2020
+New South Wales,Access,75.1,2019
+New South Wales,Affordability,59.9,2019
+New South Wales,Digital Ability,50.4,2019
+New South Wales,Digital Inclusion Index,61.8,2019
+Victoria,Access,76.9,2019
+Victoria,Affordability,60.3,2019
+Victoria,Digital Ability,52.7,2019
+Victoria,Digital Inclusion Index,63.3,2019
+Queensland,Access,75.5,2019
+Queensland,Affordability,57.9,2019
+Queensland,Digital Ability,49.4,2019
+Queensland,Digital Inclusion Index,60.9,2019
+South Australia,Access,75.1,2019
+South Australia,Affordability,57.1,2019
+South Australia,Digital Ability,48.5,2019
+South Australia,Digital Inclusion Index,60.2,2019
+Western Australia,Access,75.2,2019
+Western Australia,Affordability,57.8,2019
+Western Australia,Digital Ability,50.8,2019
+Western Australia,Digital Inclusion Index,61.3,2019
+Tasmania,Access,72.2,2019
+Tasmania,Affordability,55.9,2019
+Tasmania,Digital Ability,46.3,2019
+Tasmania,Digital Inclusion Index,58.1,2019
+Australian Capital Territory,Access,78.9,2019
+Australian Capital Territory,Affordability,66.8,2019
+Australian Capital Territory,Digital Ability,57.2,2019
+Australian Capital Territory,Digital Inclusion Index,67.6,2019
+Northern Territory,Access,74.3,2019
+Northern Territory,Affordability,62.9,2019
+Northern Territory,Digital Ability,55.6,2019
+Northern Territory,Digital Inclusion Index,64.3,2019
+New South Wales,Access,73.4,2018
+New South Wales,Affordability,59.5,2018
+New South Wales,Digital Ability,49.6,2018
+New South Wales,Digital Inclusion Index,60.8,2018
+Victoria,Access,74.7,2018
+Victoria,Affordability,58.0,2018
+Victoria,Digital Ability,51.6,2018
+Victoria,Digital Inclusion Index,61.4,2018
+Queensland,Access,73.1,2018
+Queensland,Affordability,55.8,2018
+Queensland,Digital Ability,47.6,2018
+Queensland,Digital Inclusion Index,58.8,2018
+South Australia,Access,71.1,2018
+South Australia,Affordability,54.4,2018
+South Australia,Digital Ability,47.1,2018
+South Australia,Digital Inclusion Index,57.5,2018
+Western Australia,Access,72.7,2018
+Western Australia,Affordability,56.6,2018
+Western Australia,Digital Ability,50.2,2018
+Western Australia,Digital Inclusion Index,59.8,2018
+Tasmania,Access,71.6,2018
+Tasmania,Affordability,53.7,2018
+Tasmania,Digital Ability,45.5,2018
+Tasmania,Digital Inclusion Index,56.9,2018
+Australian Capital Territory,Access,75.9,2018
+Australian Capital Territory,Affordability,67.2,2018
+Australian Capital Territory,Digital Ability,55.8,2018
+Australian Capital Territory,Digital Inclusion Index,66.3,2018
+Northern Territory,Access,71.6,2018
+Northern Territory,Affordability,52.4,2018
+Northern Territory,Digital Ability,47.5,2018
+Northern Territory,Digital Inclusion Index,57.2,2018
+New South Wales,Access,70.9,2017
+New South Wales,Affordability,58.6,2017
+New South Wales,Digital Ability,47.9,2017
+New South Wales,Digital Inclusion Index,59.1,2017
+Victoria,Access,72.0,2017
+Victoria,Affordability,55.8,2017
+Victoria,Digital Ability,48.9,2017
+Victoria,Digital Inclusion Index,58.9,2017
+Queensland,Access,70.2,2017
+Queensland,Affordability,54.8,2017
+Queensland,Digital Ability,45.3,2017
+Queensland,Digital Inclusion Index,56.8,2017
+South Australia,Access,68.6,2017
+South Australia,Affordability,51.6,2017
+South Australia,Digital Ability,45.2,2017
+South Australia,Digital Inclusion Index,55.1,2017
+Western Australia,Access,70.9,2017
+Western Australia,Affordability,53.9,2017
+Western Australia,Digital Ability,47.5,2017
+Western Australia,Digital Inclusion Index,57.4,2017
+Tasmania,Access,64.7,2017
+Tasmania,Affordability,45.7,2017
+Tasmania,Digital Ability,39.9,2017
+Tasmania,Digital Inclusion Index,50.1,2017
+Australian Capital Territory,Access,71.1,2017
+Australian Capital Territory,Affordability,60.4,2017
+Australian Capital Territory,Digital Ability,53.3,2017
+Australian Capital Territory,Digital Inclusion Index,61.6,2017
+Northern Territory,Access,70.7,2017
+Northern Territory,Affordability,60.9,2017
+Northern Territory,Digital Ability,44.6,2017
+Northern Territory,Digital Inclusion Index,58.8,2017
+New South Wales,Access,67.7,2016
+New South Wales,Affordability,55.7,2016
+New South Wales,Digital Ability,46.4,2016
+New South Wales,Digital Inclusion Index,56.6,2016
+Victoria,Access,69.0,2016
+Victoria,Affordability,55.0,2016
+Victoria,Digital Ability,47.3,2016
+Victoria,Digital Inclusion Index,57.1,2016
+Queensland,Access,67.6,2016
+Queensland,Affordability,51.6,2016
+Queensland,Digital Ability,45.1,2016
+Queensland,Digital Inclusion Index,54.8,2016
+South Australia,Access,65.4,2016
+South Australia,Affordability,48.8,2016
+South Australia,Digital Ability,42.5,2016
+South Australia,Digital Inclusion Index,52.2,2016
+Western Australia,Access,66.9,2016
+Western Australia,Affordability,54.9,2016
+Western Australia,Digital Ability,45.7,2016
+Western Australia,Digital Inclusion Index,55.8,2016
+Tasmania,Access,62.6,2016
+Tasmania,Affordability,44.2,2016
+Tasmania,Digital Ability,39.4,2016
+Tasmania,Digital Inclusion Index,48.7,2016
+Australian Capital Territory,Access,71.3,2016
+Australian Capital Territory,Affordability,59.8,2016
+Australian Capital Territory,Digital Ability,55.8,2016
+Australian Capital Territory,Digital Inclusion Index,62.3,2016
+Northern Territory,Access,69.1,2016
+Northern Territory,Affordability,55.8,2016
+Northern Territory,Digital Ability,43.8,2016
+Northern Territory,Digital Inclusion Index,56.2,2016
+New South Wales,Access,64.5,2015
+New South Wales,Affordability,55.9,2015
+New South Wales,Digital Ability,44.2,2015
+New South Wales,Digital Inclusion Index,54.9,2015
+Victoria,Access,65.4,2015
+Victoria,Affordability,53.6,2015
+Victoria,Digital Ability,44.5,2015
+Victoria,Digital Inclusion Index,54.5,2015
+Queensland,Access,64.1,2015
+Queensland,Affordability,52.1,2015
+Queensland,Digital Ability,44.0,2015
+Queensland,Digital Inclusion Index,53.4,2015
+South Australia,Access,62.5,2015
+South Australia,Affordability,48.3,2015
+South Australia,Digital Ability,43.2,2015
+South Australia,Digital Inclusion Index,51.3,2015
+Western Australia,Access,65.4,2015
+Western Australia,Affordability,58.0,2015
+Western Australia,Digital Ability,45.8,2015
+Western Australia,Digital Inclusion Index,56.4,2015
+Tasmania,Access,61.2,2015
+Tasmania,Affordability,52.0,2015
+Tasmania,Digital Ability,39.4,2015
+Tasmania,Digital Inclusion Index,50.9,2015
+Australian Capital Territory,Access,70.7,2015
+Australian Capital Territory,Affordability,64.0,2015
+Australian Capital Territory,Digital Ability,51.7,2015
+Australian Capital Territory,Digital Inclusion Index,62.1,2015
+Northern Territory,Access,67.5,2015
+Northern Territory,Affordability,57.3,2015
+Northern Territory,Digital Ability,50.3,2015
+Northern Territory,Digital Inclusion Index,58.4,2015
+New South Wales,Access,63.8,2014
+New South Wales,Affordability,58.7,2014
+New South Wales,Digital Ability,42.2,2014
+New South Wales,Digital Inclusion Index,54.9,2014
+Victoria,Access,65.1,2014
+Victoria,Affordability,55.1,2014
+Victoria,Digital Ability,42.6,2014
+Victoria,Digital Inclusion Index,54.3,2014
+Queensland,Access,64.0,2014
+Queensland,Affordability,52.7,2014
+Queensland,Digital Ability,42.6,2014
+Queensland,Digital Inclusion Index,53.1,2014
+South Australia,Access,61.3,2014
+South Australia,Affordability,52.1,2014
+South Australia,Digital Ability,37.7,2014
+South Australia,Digital Inclusion Index,50.3,2014
+Western Australia,Access,63.5,2014
+Western Australia,Affordability,58.4,2014
+Western Australia,Digital Ability,43.0,2014
+Western Australia,Digital Inclusion Index,55.0,2014
+Tasmania,Access,58.7,2014
+Tasmania,Affordability,53.5,2014
+Tasmania,Digital Ability,39.0,2014
+Tasmania,Digital Inclusion Index,50.4,2014
+Australian Capital Territory,Access,67.5,2014
+Australian Capital Territory,Affordability,62.1,2014
+Australian Capital Territory,Digital Ability,51.3,2014
+Australian Capital Territory,Digital Inclusion Index,60.3,2014
+Northern Territory,Access,64.0,2014
+Northern Territory,Affordability,57.5,2014
+Northern Territory,Digital Ability,41.5,2014
+Northern Territory,Digital Inclusion Index,54.3,2014

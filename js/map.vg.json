@@ -1,19 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Australian Digital Inclusion Map",
-  "width": 900,
-  "height": 800,
+  "width": 1300,
+  "height": 595,
   "params": [
     {
       "name": "YearSelection",
-      "value": 2014,
-      "bind": {
-        "input": "range",
-        "min": 2014,
-        "max": 2020,
-        "step": 1,
-        "name": "Year: "
-      }
+      "value": 2014
     }
   ],
   "projection": { "type": "equirectangular" },
@@ -38,7 +31,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/data/dgiByStates.csv"
+        "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/mapData.csv"
       },
       "transform": [
         {
@@ -64,12 +57,12 @@
           "field": "Digital Inclusion Index",
           "type": "quantitative",
           "scale": { "domain": [46, 70], "scheme": "blues" },
-          "legend": { "gradientLength": 350, "gradientThickness": 15 }
+          "legend": { "gradientLength": 550, "gradientThickness": 15 }
         },
         "tooltip": [
           { "field": "State", "title": "State" },
           { "field": "Digital Inclusion Index", "title": "Index" },
-          { "field": "year", "title": "Year" }
+          { "field": "Year", "title": "Year" }
         ]
       }
     },
@@ -86,7 +79,7 @@
           "lookup": "properties.name",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/data/dgiByStates.csv"
+              "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/mapData.csv"
             },
             "key": "State",
             "fields": ["Digital Inclusion Index"]

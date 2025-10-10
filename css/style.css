@@ -1,0 +1,51 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0; 
+    gap: 50px;
+    background-color: white;
+}
+
+header {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropdown-container label {
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+}
+
+select {
+    width: 70px; 
+    padding: 10px 15px; 
+    font-size: 16px;
+    border: none;
+    background-color: #f0f0f0;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.story {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#vg1 {
+    width: 98vw;
+    height: calc(100vh - 20vh);
+    margin: 0;
+}

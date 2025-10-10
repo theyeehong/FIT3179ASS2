@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Digital Inclusion Index by Metric (Australia 2020)",
+  "width": 450,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/gbarData.csv"
+  },
+  "layer": [
+    {
+      "selection": {
+        "StateHighlight": {
+          "type": "multi",
+          "fields": ["State"],
+          "bind": "legend"
+        }
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": { "field": "Metric", "axis": { "labelAngle": 0 } },
+        "y": { "field": "Score", "type": "quantitative", "scale": { "domain": [0, 100] } },
+        "xOffset": { "field": "State" },
+        "color": { "field": "State" },
+        "opacity": {
+          "condition": { "selection": "StateHighlight", "value": 1 },
+          "value": 0.1
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": 5,
+        "dx": 15,
+        "fontSize": 10,
+        "angle": -90
+      },
+      "encoding": {
+        "x": { "field": "Metric" },
+        "y": { "field": "Score", "type": "quantitative" },
+        "xOffset": { "field": "State" },
+        "text": { "field": "Score" },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": { "selection": "StateHighlight", "value": 1 },
+          "value": 0.1
+        }
+      }
+    }
+  ]
+}

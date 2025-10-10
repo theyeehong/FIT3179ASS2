@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
     <script src="vega_lite_vis.js"></script>
-
+    <link rel="stylesheet" href="css/style.css">
     <title>Digital Inclusion Map</title>
 </head>
+
 <body>
-    <h1>Australian Digital Inclusion Map 2020</h1>
+    <div class="header-container">
+        <header>Digital Divide down Under</header>
+        <div class="dropdown-container">
+            <label for="year-select">Year: </label>
+            <select id="year-select">
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+            </select>
+        </div>
+    </div>
+    <p class="story">blah blah blah</p>
     <div id="vg1"></div>
+    <div id="vg2"></div>
 </body>
+
 </html>
