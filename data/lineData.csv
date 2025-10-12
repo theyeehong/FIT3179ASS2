@@ -1,22 +1,36 @@
-Australia,Metric,Employment,Score,Year
-Australia,Digital Inclusion Index,Employed,67.8,2020
-Australia,Digital Inclusion Index,Unemployed,63.6,2020
-Australia,Digital Inclusion Index,NILF,54.3,2020
-Australia,Digital Inclusion Index,Employed,66.9,2019
-Australia,Digital Inclusion Index,Unemployed,61.1,2019
-Australia,Digital Inclusion Index,NILF,53.8,2019
-Australia,Digital Inclusion Index,Employed,65.0,2018
-Australia,Digital Inclusion Index,Unemployed,60.7,2018
-Australia,Digital Inclusion Index,NILF,51.9,2018
-Australia,Digital Inclusion Index,Employed,62.8,2017
-Australia,Digital Inclusion Index,Unemployed,58.7,2017
-Australia,Digital Inclusion Index,NILF,49.9,2017
-Australia,Digital Inclusion Index,Employed,60.6,2016
-Australia,Digital Inclusion Index,Unemployed,53.6,2016
-Australia,Digital Inclusion Index,NILF,48.2,2016
-Australia,Digital Inclusion Index,Employed,59.0,2015
-Australia,Digital Inclusion Index,Unemployed,54.1,2015
-Australia,Digital Inclusion Index,NILF,47.1,2015
-Australia,Digital Inclusion Index,Employed,58.9,2014
-Australia,Digital Inclusion Index,Unemployed,52.4,2014
-Australia,Digital Inclusion Index,NILF,46.3,2014
+Main Source of Income,Value,Year
+Zero or negative income,0.5,2014
+Employee income,60.5,2014
+Own unincorporated business income,4.1,2014
+Government pensions and allowances,24.7,2014
+Other income,10.2,2014
+Zero or negative income,0.4,2015
+Employee income,60.7,2015
+Own unincorporated business income,4.3,2015
+Government pensions and allowances,24.2,2015
+Other income,10.4,2015
+Zero or negative income,0.4,2016
+Employee income,60.7,2016
+Own unincorporated business income,4.3,2016
+Government pensions and allowances,24.2,2016
+Other income,10.4,2016
+Zero or negative income,0.4,2017
+Employee income,61.0,2017
+Own unincorporated business income,4.3,2017
+Government pensions and allowances,22.6,2017
+Other income,11.6,2017
+Zero or negative income,0.4,2018
+Employee income,61.0,2018
+Own unincorporated business income,4.3,2018
+Government pensions and allowances,22.6,2018
+Other income,11.6,2018
+Zero or negative income,0.6,2019
+Employee income,61.9,2019
+Own unincorporated business income,3.1,2019
+Government pensions and allowances,22.3,2019
+Other income,12.1,2019
+Zero or negative income,0.6,2020
+Employee income,61.9,2020
+Own unincorporated business income,3.1,2020
+Government pensions and allowances,22.3,2020
+Other income,12.1,2020

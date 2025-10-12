@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "description": "Interactive radar chart with year selection",
+  "description": "Interactive radar chart",
   "width": 500,
   "height": 800,
   "padding": 40,
