@@ -1,0 +1,106 @@
+Year,Metric,Score,Income Quintiles
+2020,Access,82.4,Q1
+2020,Access,82.8,Q2
+2020,Access,78.5,Q3
+2020,Access,70.9,Q4
+2020,Access,62.2,Q5
+2020,Affordability,78.5,Q1
+2020,Affordability,67.6,Q2
+2020,Affordability,58.1,Q3
+2020,Affordability,46.3,Q4
+2020,Affordability,32.7,Q5
+2020,Digital Ability,60.6,Q1
+2020,Digital Ability,58.7,Q2
+2020,Digital Ability,52.7,Q3
+2020,Digital Ability,44.2,Q4
+2020,Digital Ability,36.3,Q5
+2019,Access,83.1,Q1
+2019,Access,80.9,Q2
+2019,Access,78.2,Q3
+2019,Access,70.8,Q4
+2019,Access,61.9,Q5
+2019,Affordability,77.0,Q1
+2019,Affordability,66.5,Q2
+2019,Affordability,55.0,Q3
+2019,Affordability,45.5,Q4
+2019,Affordability,32.2,Q5
+2019,Digital Ability,61.4,Q1
+2019,Digital Ability,56.6,Q2
+2019,Digital Ability,52.9,Q3
+2019,Digital Ability,42.9,Q4
+2019,Digital Ability,35.8,Q5
+2018,Access,81.0,Q1
+2018,Access,79.6,Q2
+2018,Access,75.7,Q3
+2018,Access,68.6,Q4
+2018,Access,59.1,Q5
+2018,Affordability,75.4,Q1
+2018,Affordability,64.8,Q2
+2018,Affordability,53.9,Q3
+2018,Affordability,43.2,Q4
+2018,Affordability,30.9,Q5
+2018,Digital Ability,59.8,Q1
+2018,Digital Ability,56.6,Q2
+2018,Digital Ability,51.3,Q3
+2018,Digital Ability,42.0,Q4
+2018,Digital Ability,33.7,Q5
+2017,Access,79.5,Q1
+2017,Access,77.2,Q2
+2017,Access,73.4,Q3
+2017,Access,66.6,Q4
+2017,Access,56.3,Q5
+2017,Affordability,74.0,Q1
+2017,Affordability,62.7,Q2
+2017,Affordability,52.9,Q3
+2017,Affordability,42.1,Q4
+2017,Affordability,30.3,Q5
+2017,Digital Ability,58.5,Q1
+2017,Digital Ability,54.3,Q2
+2017,Digital Ability,49.4,Q3
+2017,Digital Ability,40.6,Q4
+2017,Digital Ability,33.5,Q5
+2016,Access,75.9,Q1
+2016,Access,75.1,Q2
+2016,Access,71.4,Q3
+2016,Access,62.6,Q4
+2016,Access,52.8,Q5
+2016,Affordability,71.2,Q1
+2016,Affordability,62.3,Q2
+2016,Affordability,51.8,Q3
+2016,Affordability,39.0,Q4
+2016,Affordability,28.8,Q5
+2016,Digital Ability,56.4,Q1
+2016,Digital Ability,53.2,Q2
+2016,Digital Ability,48.8,Q3
+2016,Digital Ability,38.8,Q4
+2016,Digital Ability,31.4,Q5
+2015,Access,74.9,Q1
+2015,Access,72.3,Q2
+2015,Access,68.2,Q3
+2015,Access,61.4,Q4
+2015,Access,50.4,Q5
+2015,Affordability,71.0,Q1
+2015,Affordability,59.8,Q2
+2015,Affordability,53.5,Q3
+2015,Affordability,42.1,Q4
+2015,Affordability,31.2,Q5
+2015,Digital Ability,55.4,Q1
+2015,Digital Ability,51.3,Q2
+2015,Digital Ability,46.7,Q3
+2015,Digital Ability,39.5,Q4
+2015,Digital Ability,30.0,Q5
+2014,Access,74.3,Q1
+2014,Access,72.3,Q2
+2014,Access,67.0,Q3
+2014,Access,61.0,Q4
+2014,Access,47.4,Q5
+2014,Affordability,69.7,Q1
+2014,Affordability,61.0,Q2
+2014,Affordability,54.5,Q3
+2014,Affordability,45.9,Q4
+2014,Affordability,33.1,Q5
+2014,Digital Ability,54.5,Q1
+2014,Digital Ability,50.2,Q2
+2014,Digital Ability,44.8,Q3
+2014,Digital Ability,37.6,Q4
+2014,Digital Ability,26.5,Q5

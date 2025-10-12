@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Australian Digital Inclusion Map",
-  "width": 1000,
+
+  "width": 900,
   "height": 595,
   "params": [
     {
