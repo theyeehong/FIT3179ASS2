@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 900,
+  "height": 550,
+  "params": [
+    {
+      "name": "YearSelection",
+      "value": 2014
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/heatmapData.csv"
+  },
+  "transform": [{ "filter": "datum.Year == YearSelection" }],
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "y": {
+          "field": "Metric",
+          "type": "nominal",
+          "axis": {
+            "labelFontSize": 16,
+            "titleFontSize": 18,
+            "labelAngle": -90
+          }
+        },
+        "x": {
+          "field": "Income Quintiles",
+          "type": "nominal",
+          "axis": {
+            "labelFontSize": 16,
+            "titleFontSize": 18,
+            "labelAngle": 0
+          }
+        },
+        "color": {
+          "field": "Score",
+          "type": "quantitative",
+          "scale": { "scheme": "blues" },
+          "legend": {
+            "gradientLength": 535,
+            "gradientThickness": 15,
+            "labelFontSize": 14,
+            "titleFontSize": 16
+          }
+        },
+        "tooltip": [
+          { "field": "Year", "title": "Year" },
+          { "field": "Metric", "type": "nominal" },
+          { "field": "Income Quintiles", "type": "nominal" },
+          { "field": "Score", "type": "quantitative" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "baseline": "middle",
+        "fontSize": 16
+      },
+      "encoding": {
+        "y": { "field": "Metric", "type": "nominal" },
+        "x": { "field": "Income Quintiles", "type": "nominal" },
+        "text": { "field": "Score", "type": "quantitative" }
+      }
+    }
+  ],
+  "config": {
+    "axis": { "grid": true, "tickBand": "extent" }
+  }
+}

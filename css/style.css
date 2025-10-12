@@ -58,7 +58,7 @@ select {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .nav-buttons button {
@@ -91,19 +91,20 @@ select {
     justify-content: center;
     scroll-snap-align: start;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .map-container {
     display: flex;
     align-items: stretch;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
-    padding-right: 5vw;
+    padding-right: 10vw;
     padding-left: 0px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .map-title h2 {
@@ -111,7 +112,7 @@ select {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lato';
 }
 
 .map-container>#vg1 {
@@ -119,8 +120,49 @@ select {
 }
 
 .map-container>.map-textbox {
+    flex: 0 0 35%;
+    font-family: 'Lato', Arial, sans-serif;
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+
+.map-container>.map-textbox>h2 {
+    font-size: 30px;
+}
+
+.map-container>.map-textbox>p {
+    font-size: 20px;
+}
+
+.heatmap-container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding-right: 10vw;
+    padding-left: 4vw;
+    margin-top: 15px;
+}
+
+.heatmap-title h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.heatmap-container>#vg2 {
+    flex: 0 0 70%;
+}
+
+.heatmap-container>.heatmap-textbox {
     flex: 0 0 30%;
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid #ccc;
     padding: 5px;
+    text-align: justify-all;
 }

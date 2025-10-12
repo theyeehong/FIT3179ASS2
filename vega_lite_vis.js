@@ -1,8 +1,10 @@
 var vg1 = "js/map.vg.json";
-var vg2 = "js/gbar.vg.json";
+var vg2 = "js/heatmap.vg.json";
+var vg3 = "js/gbar.vg.json";
 
 let vg1View = null;
 let vg2View = null;
+let vg3View = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   function renderCharts(year) {
@@ -22,6 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       vg2View.signal("YearSelection", year).runAsync();
     }
+    if (!vg3View) {
+      vegaEmbed("#vg3", vg3, { actions: false }).then((result) => {
+        vg3View = result.view;
+        vg3View.signal("YearSelection", year).runAsync();
+      });
+    } else {
+      vg3View.signal("YearSelection", year).runAsync();
+    }
   }
 
   renderCharts(2014);
@@ -34,7 +44,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   const sections = document.querySelectorAll(".section");
-  let currentSection = 0;
+  
+  function getCurrentSectionIndex() {
+    let maxIntersection = 0;
+    let currentIndex = 0;
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      if (visibleHeight > maxIntersection) {
+        maxIntersection = visibleHeight;
+        currentIndex = index;
+      }
+    });
+    return currentIndex;
+  }
+
+  let currentSection = getCurrentSectionIndex();
 
   function scrollToSection(index) {
     if (index >= 0 && index < sections.length && index !== currentSection) {
@@ -50,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
       currentSection === sections.length - 1;
   }
 
-  // Button event listeners
   document.getElementById("nav-up").addEventListener("click", () => {
     scrollToSection(currentSection - 1);
   });
@@ -59,6 +83,13 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollToSection(currentSection + 1);
   });
 
-  // Initialize button states
   updateButtonStates();
+
+  window.addEventListener("scroll", () => {
+    const newSection = getCurrentSectionIndex();
+    if (newSection !== currentSection) {
+      currentSection = newSection;
+      updateButtonStates();
+    }
+  });
 });

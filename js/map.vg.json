@@ -57,7 +57,13 @@
           "field": "Digital Inclusion Index",
           "type": "quantitative",
           "scale": { "domain": [46, 70], "scheme": "blues" },
-          "legend": { "gradientLength": 580, "gradientThickness": 15 }
+          "legend": {
+            "gradientLength": 580,
+            "gradientThickness": 15,
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "title": "DGI"
+          }
         },
         "tooltip": [
           { "field": "State", "title": "State" },
@@ -89,7 +95,7 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 15,
         "fontWeight": "bold",
         "color": "black"
       },
