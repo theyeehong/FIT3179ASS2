@@ -1,10 +1,12 @@
 var vg1 = "js/map.vg.json";
 var vg2 = "js/heatmap.vg.json";
 var vg3 = "js/gbar.vg.json";
+var vg3 = "js/radar.vg.json";
 
 let vg1View = null;
 let vg2View = null;
 let vg3View = null;
+let vg4View = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   function renderCharts(year) {
@@ -31,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     } else {
       vg3View.signal("YearSelection", year).runAsync();
+    }
+    if (!vg4View) {
+      vegaEmbed("#vg4", vg4, { actions: false }).then((result) => {
+        vg4View = result.view;
+        vg4View.signal("YearSelection", year).runAsync();
+      });
+    } else {
+      vg4View.signal("YearSelection", year).runAsync();
     }
   }
 
