@@ -166,3 +166,28 @@ select {
     padding: 5px;
     text-align: justify-all;
 }
+
+.section3-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+    padding-right: 10vw;
+    padding-left: 4vw;
+    margin-top: 53px;
+}
+
+.left-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.left-column>#vg3,
+#vg5 {
+    border: 1px solid black;
+}
+
+.right-column>#vg4 {
+    border: 1px solid black;
+}

@@ -5,7 +5,7 @@
     "subtitle": {"signal": "YearSelection"}
   },
   "width": 450,
-  "height": 200,
+  "height": 250,
   "params": [
     {
       "name": "YearSelection",

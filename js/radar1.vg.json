@@ -1,16 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
   "description": "Interactive radar chart with year selection",
-  "width": 400,
-  "height": 400,
-  "padding": 40,
+  "width": 650,
+  "height": 615,
   "autosize": {"type": "none", "contains": "padding"},
   "signals": [
     {"name": "radius", "update": "width / 2"},
     {
       "name": "YearSelection",
-      "value": 2014,
-      "bind": {"input": "range", "min": 2014, "max": 2020, "step": 1}
+      "value": 2014
     }
   ],
   "data": [
@@ -65,7 +63,7 @@
       "range": {"scheme": "category10"}
     }
   ],
-  "encode": {"enter": {"x": {"signal": "radius"}, "y": {"signal": "radius"}}},
+  "encode": {"enter": {"x": {"signal": "radius-60"}, "y": {"signal": "radius-10"}}},
   "marks": [
     {
       "type": "group",

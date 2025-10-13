@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Digital Inclusion Index by Metric",
+    "subtitle": { "signal": "YearSelection" }
+  },
+  "width": 450,
+  "height": 230,
+  "params": [
+    {
+      "name": "YearSelection",
+      "value": 2014
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/lineData.csv"
+  },
+  "transform": [{ "filter": "datum.Year == YearSelection" }],
+  "layer": [
+    {
+      "mark": { "type": "arc", "innerRadius": 50 },
+      "encoding": {
+        "theta": { "field": "Value", "type": "quantitative" },
+        "color": { "field": "Main Source of Income", "type": "nominal" }
+      }
+    }
+  ]
+}

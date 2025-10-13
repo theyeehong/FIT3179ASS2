@@ -1,12 +1,14 @@
 var vg1 = "js/map.vg.json";
 var vg2 = "js/heatmap.vg.json";
 var vg3 = "js/gbar.vg.json";
-var vg3 = "js/radar.vg.json";
+var vg4 = "js/radar1.vg.json";
+var vg5 = "js/doughnut.vg.json"
 
 let vg1View = null;
 let vg2View = null;
 let vg3View = null;
 let vg4View = null;
+let vg5View = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   function renderCharts(year) {
@@ -42,6 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       vg4View.signal("YearSelection", year).runAsync();
     }
+    if (!vg5View) {
+      vegaEmbed("#vg5", vg5, { actions: false }).then((result) => {
+        vg5View = result.view;
+        vg5View.signal("YearSelection", year).runAsync();
+      });
+    } else {
+      vg5View;
+    }
   }
 
   renderCharts(2014);
@@ -54,13 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   const sections = document.querySelectorAll(".section");
-  
+
   function getCurrentSectionIndex() {
     let maxIntersection = 0;
     let currentIndex = 0;
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
-      const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      const visibleHeight =
+        Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
       if (visibleHeight > maxIntersection) {
         maxIntersection = visibleHeight;
         currentIndex = index;
