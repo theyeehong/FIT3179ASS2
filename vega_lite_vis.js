@@ -1,7 +1,7 @@
 var vg1 = "js/map.vg.json";
 var vg2 = "js/heatmap.vg.json";
 var vg3 = "js/gbar.vg.json";
-var vg4 = "js/radar1.vg.json";
+var vg4 = "js/radar.vg.json";
 var vg5 = "js/doughnut.vg.json"
 
 let vg1View = null;
