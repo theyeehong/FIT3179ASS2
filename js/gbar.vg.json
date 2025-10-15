@@ -1,9 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Digital Inclusion Index by Metric",
-    "subtitle": {"signal": "YearSelection"}
-  },
   "width": 450,
   "height": 250,
   "params": [
@@ -27,11 +23,17 @@
       },
       "mark": "bar",
       "encoding": {
-        "x": { "field": "Metric", "axis": { "labelAngle": 0 } },
+        "x": {
+          "field": "Metric",
+          "axis": { "labelAngle": 0, "titleFontWeight": "normal" }
+        },
         "y": {
           "field": "Score",
           "type": "quantitative",
-          "scale": { "domain": [0, 100] }
+          "scale": { "domain": [0, 100] },
+          "axis": {
+            "titleFontWeight": "normal"
+          }
         },
         "xOffset": { "field": "State" },
         "color": { "field": "State" },
@@ -48,13 +50,14 @@
       }
     },
     {
+      "transform": [{ "filter": "datum.State == 'Victoria'" }],
       "mark": {
         "type": "text",
         "align": "center",
         "baseline": "bottom",
         "dy": 5,
         "dx": 15,
-        "fontSize": 10,
+        "fontSize": 12,
         "angle": -90
       },
       "encoding": {

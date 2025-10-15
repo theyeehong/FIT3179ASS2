@@ -9,6 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script src="vega_lite_vis.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Digital Inclusion Map</title>
 </head>
 
@@ -16,19 +21,16 @@
 
     <div class="header-container">
         <header>Digital Divide down Under</header>
-        <div class="dropdown-container">
-            <label for="year-select">Year: </label>
-            <select id="year-select">
-                <option value="2014">2014</option>
-                <option value="2015">2015</option>
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-            </select>
+    </div>
+
+    <div class="toolbar-container">
+        <div class="slider-container">
+            <label for="year-slider">Year:</label>
+            <input type="range" id="year-slider" min="2014" max="2020" step="1" value="2014">
+            <span id="year-value">2014</span>
         </div>
     </div>
+
 
     <div class="nav-buttons">
         <button id="nav-up" aria-label="Navigate to previous section">↑</button>
@@ -36,6 +38,19 @@
     </div>
 
     <div class="content">
+
+        <section id="intro" class="section">
+            <div class="intro-container">
+                <h2>Understanding Digital Inclusion in Australia</h2>
+                <p>We are living in a digital era where internet access is essential for education, work, and daily
+                    life.
+                    Yet not all Australians are equally included. This project explores how household income and wealth
+                    affect digital inclusion, highlighting inequalities in access, affordability, and digital ability
+                    across
+                    states, territories, and income groups.</p>
+            </div>
+        </section>
+
 
         <section id="section1" class="section">
             <div class="map-container">
@@ -77,11 +92,58 @@
 
         <section id="section3" class="section">
             <div class="section3-container">
-                <div class="left-column">
+                <div class="graph-container">
+                    <div class="graph-textbox">
+                        <h2>Income Distribution per week by Quintile</h2>
+                        <p>This treemap visualizes how total income is distributed across different<br>
+                            income quintiles per week. Each rectangle represents a quintile, and<br>
+                            the size of the rectangle corresponds to the proportion of<br>
+                            total income earned by that group. It allows for easy comparison<br>
+                            between lower and higher income groups.</p>
+                    </div>
+                    <br>
                     <div id="vg3"></div>
+                </div>
+                <div class="graph-container">
+                    <div class="graph-textbox">
+                        <h2>Composition of Main Income Sources</h2>
+                        <p>This doughnut chart shows the breakdown of households’ main sources<br>
+                            of income, such as employee income or government transfer.<br>
+                            Each slice represents the relative share of households relying on<br>
+                            that income source, making it simple to see which sources<br>
+                            are most prevalent.</p>
+                    </div>
                     <div id="vg5"></div>
                 </div>
-                <div class="right-column">
+            </div>
+        </section>
+
+        <section id="section3" class="section">
+            <div class="section3-container">
+                <div class="graph-container">
+                    <div class="graph-textbox">
+                        <h2>Comparing Digital Inclusion Across States</h2>
+                        <p>This grouped bar chart highlights how each Australian state performs<br>
+                            across key digital inclusion metrics, such as Access, Affordability,<br>
+                            and Digital Ability. It allows a direct comparison of strengths<br>
+                            and weaknesses between states, revealing areas where certain regions<br>
+                            excel and others lag behind. For clarity, annotations are only shown<br>
+                            for Victoria, highlighting key scores in that state.
+                        </p>
+                    </div>
+                    <br>
+                    <div id="vg6"></div>
+                </div>
+                <div class="graph-container">
+                    <div class="graph-textbox">
+                        <h2>Australia’s Digital Inclusion Profile</h2>
+                        <p>This radar chart presents Australia’s overall performance across the<br>
+                            three key dimensions of digital inclusion: Access, Affordability,<br>
+                            and Digital Ability. It provides a clear snapshot of strengths<br>
+                            and areas for improvement at the national level, highlighting how<br>
+                            well Australians are connected, able to afford digital services, and<br>
+                            equipped with the skills to participate in the digital world.</p>
+                    </div>
                     <div id="vg4"></div>
                 </div>
             </div>

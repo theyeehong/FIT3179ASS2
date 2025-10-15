@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "width": 900,
-  "height": 595,
+  "height": 550,
   "params": [
     {
       "name": "YearSelection",
@@ -11,6 +11,17 @@
   ],
   "projection": { "type": "equirectangular" },
   "layer": [
+        {
+      "data": {
+        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_graticules_10"
+        }
+      },
+      "mark": { "type": "geoshape", "stroke": "grey" },
+      "encoding": {}
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json",
@@ -58,7 +69,7 @@
           "type": "quantitative",
           "scale": { "domain": [46, 70], "scheme": "blues" },
           "legend": {
-            "gradientLength": 580,
+            "gradientLength": 505,
             "gradientThickness": 15,
             "labelFontSize": 14,
             "titleFontSize": 16,
@@ -104,17 +115,6 @@
         "longitude": { "field": "properties.longitude" },
         "latitude": { "field": "properties.latitude" }
       }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/theyeehong/FIT3179ASS2/refs/heads/main/js/ne_10m.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_10m_graticules_10"
-        }
-      },
-      "mark": { "type": "geoshape", "stroke": "grey" },
-      "encoding": {}
     }
   ]
 }

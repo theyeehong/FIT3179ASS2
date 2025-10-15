@@ -1,14 +1,16 @@
 var vg1 = "js/map.vg.json";
 var vg2 = "js/heatmap.vg.json";
-var vg3 = "js/gbar.vg.json";
+var vg3 = "js/treemap.vg.json";
 var vg4 = "js/radar.vg.json";
-var vg5 = "js/doughnut.vg.json"
+var vg5 = "js/doughnut.vg.json";
+var vg6 = "js/gbar.vg.json";
 
 let vg1View = null;
 let vg2View = null;
 let vg3View = null;
 let vg4View = null;
 let vg5View = null;
+let vg6View = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   function renderCharts(year) {
@@ -50,18 +52,28 @@ document.addEventListener("DOMContentLoaded", function () {
         vg5View.signal("YearSelection", year).runAsync();
       });
     } else {
-      vg5View;
+      vg5View.signal("YearSelection", year).runAsync();
+    }
+    if (!vg6View) {
+      vegaEmbed("#vg6", vg6, { actions: false }).then((result) => {
+        vg6View = result.view;
+        vg6View.signal("YearSelection", year).runAsync();
+      });
+    } else {
+      vg6View.signal("YearSelection", year).runAsync();
     }
   }
 
   renderCharts(2014);
 
-  document
-    .getElementById("year-select")
-    .addEventListener("change", function () {
-      const selectedYear = parseInt(this.value);
-      renderCharts(selectedYear);
-    });
+  const yearSlider = document.getElementById("year-slider");
+  const yearValue = document.getElementById("year-value");
+
+  yearSlider.addEventListener("input", function () {
+    const selectedYear = parseInt(this.value);
+    yearValue.textContent = selectedYear;
+    renderCharts(selectedYear);
+  });
 
   const sections = document.querySelectorAll(".section");
 

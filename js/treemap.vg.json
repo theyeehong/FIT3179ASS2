@@ -1,0 +1,169 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "title": "Quintile Value Distribution for Selected Year",
+  "description": "A treemap visualization for quintile values for a specific year, loaded from a CSV URL (fixed binary layout, no hover color change, no aspect ratio, with percentage tooltips).",
+  "width": 650,
+  "height": 300,
+  "padding": 2.5,
+  "autosize": "none",
+
+  "signals": [
+    {
+      "name": "layout",
+      "value": "binary"
+    },
+    {
+      "name": "YearSelection",
+      "value": 2014
+    }
+  ],
+
+  "data": [
+    {
+      "name": "rawData",
+      "url": "https://raw.githubusercontent.com/theyeehong/DigitalDividedownUnder/refs/heads/main/data/treemapData.csv",
+      "format": { "type": "csv" }
+    },
+    {
+      "name": "aggregated",
+      "source": "rawData",
+      "transform": [
+        { "type": "filter", "expr": "datum.Year == YearSelection" },
+        {
+          "type": "aggregate",
+          "groupby": ["Quintile"],
+          "ops": ["sum"],
+          "fields": ["Value"],
+          "as": ["size"]
+        },
+        {
+          "type": "joinaggregate",
+          "ops": ["sum"],
+          "fields": ["size"],
+          "as": ["total_size"]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.size / datum.total_size * 100",
+          "as": "percentage"
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "values": [
+        { "id": "root", "parent": null },
+        { "id": "Lowest quintile", "parent": "root" },
+        { "id": "Second quintile", "parent": "root" },
+        { "id": "Third quintile", "parent": "root" },
+        { "id": "Fourth quintile", "parent": "root" },
+        { "id": "Highest quintile", "parent": "root" }
+      ],
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "aggregated",
+          "key": "Quintile",
+          "fields": ["id"],
+          "values": ["size", "percentage"],
+          "default": { "size": 0, "percentage": 0 }
+        },
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "size",
+          "sort": { "field": "size", "order": "descending" },
+          "round": true,
+          "method": { "signal": "layout" },
+          "size": [{ "signal": "width" }, { "signal": "height" }]
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [{ "type": "filter", "expr": "!datum.children" }]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": { "data": "leaves", "field": "id" },
+      "range": ["#deebf7", "#9ecae1", "#6baed6", "#3182bd", "#08519c"]
+    },
+    {
+      "name": "size",
+      "type": "ordinal",
+      "domain": [0, 1],
+      "range": [20, 14]
+    },
+    {
+      "name": "opacity",
+      "type": "ordinal",
+      "domain": [0, 1],
+      "range": [0.5, 1.0]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": { "data": "leaves" },
+      "encode": {
+        "enter": {
+          "fill": { "scale": "color", "field": "id" },
+          "stroke": { "value": "#fff" },
+          "tooltip": {
+            "signal": "{'Quintile': datum.id, 'Percentage': format(datum.percentage, '.1f') + '%'}"
+          }
+        },
+        "update": {
+          "x": { "field": "x0" },
+          "y": { "field": "y0" },
+          "x2": { "field": "x1" },
+          "y2": { "field": "y1" }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": { "data": "leaves" },
+      "encode": {
+        "enter": {
+          "x": { "signal": "0.5 * (datum.x0 + datum.x1)" },
+          "y": { "signal": "0.5 * (datum.y0 + datum.y1) - 8" },
+          "text": { "field": "id" },
+          "align": { "value": "center" },
+          "baseline": { "value": "middle" },
+          "fill": {
+            "signal": "luminance(scale('color', datum.id)) > 0.5 ? 'black' : 'white'"
+          },
+          "fontSize": { "value": 14 }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": { "data": "leaves" },
+      "encode": {
+        "enter": {
+          "x": { "signal": "0.5 * (datum.x0 + datum.x1)" },
+          "y": { "signal": "0.5 * (datum.y0 + datum.y1) + 8" },
+          "text": { "signal": "format(datum.percentage, '.1f') + '%'" },
+          "align": { "value": "center" },
+          "baseline": { "value": "middle" },
+          "fill": {
+            "signal": "luminance(scale('color', datum.id)) > 0.5 ? 'black' : 'white'"
+          },
+          "fontSize": { "value": 12 }
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 900,
-  "height": 550,
+  "width": 800,
+  "height": 500,
   "params": [
     {
       "name": "YearSelection",
@@ -22,7 +22,8 @@
           "axis": {
             "labelFontSize": 16,
             "titleFontSize": 18,
-            "labelAngle": -90
+            "labelAngle": -90,
+            "titleFontWeight": "normal"
           }
         },
         "x": {
@@ -31,15 +32,16 @@
           "axis": {
             "labelFontSize": 16,
             "titleFontSize": 18,
-            "labelAngle": 0
+            "labelAngle": 0,
+            "titleFontWeight": "normal"
           }
         },
         "color": {
           "field": "Score",
           "type": "quantitative",
-          "scale": { "scheme": "blues" },
+          "scale": { "domain": [25, 85], "scheme": "blues" },
           "legend": {
-            "gradientLength": 535,
+            "gradientLength": 485,
             "gradientThickness": 15,
             "labelFontSize": 14,
             "titleFontSize": 16
@@ -56,14 +58,20 @@
     {
       "mark": {
         "type": "text",
-        "color": "black",
         "baseline": "middle",
         "fontSize": 16
       },
       "encoding": {
         "y": { "field": "Metric", "type": "nominal" },
         "x": { "field": "Income Quintiles", "type": "nominal" },
-        "text": { "field": "Score", "type": "quantitative" }
+        "text": { "field": "Score", "type": "quantitative" },
+        "color": {
+          "condition": {
+            "test": "datum.Score > 55",
+            "value": "white"
+          },
+          "value": "black"
+        }
       }
     }
   ],

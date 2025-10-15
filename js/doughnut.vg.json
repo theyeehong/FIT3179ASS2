@@ -1,11 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "title": {
-    "text": "Digital Inclusion Index by Metric",
-    "subtitle": { "signal": "YearSelection" }
-  },
-  "width": 450,
+  "width": 530,
   "height": 230,
+  "padding": { "top": 50, "right": 20 },
   "params": [
     {
       "name": "YearSelection",
@@ -18,10 +15,43 @@
   "transform": [{ "filter": "datum.Year == YearSelection" }],
   "layer": [
     {
-      "mark": { "type": "arc", "innerRadius": 50 },
+      "mark": {
+        "type": "arc",
+        "outerRadius": 130
+      },
       "encoding": {
         "theta": { "field": "Value", "type": "quantitative" },
-        "color": { "field": "Main Source of Income", "type": "nominal" }
+        "color": {
+          "field": "Main Source of Income",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#4e79a7",
+              "#f28e2b",
+              "#e15759",
+              "#76b7b2",
+              "#59a14f",
+              "#edc948",
+              "#b07aa1"
+            ]
+          },
+          "legend": {
+            "title": "Main Source of Income",
+            "labelFontSize": 12,
+            "titleFontSize": 14,
+            "orient": "right",
+            "offset": -120,
+            "labelLimit": 300
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Main Source of Income",
+            "title": "Main Source of Income"
+          },
+          { "field": "Value", "title": "Percentage" },
+          { "field": "Year", "title": "Year" }
+        ]
       }
     }
   ]
