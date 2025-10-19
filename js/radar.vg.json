@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "description": "Interactive radar chart with outer polygon",
+  "background": "#f5f5f5",
   "width": 655,
-  "height": 355,
+  "height": 345,
   "autosize": { "type": "none", "contains": "padding" },
   "signals": [
     { "name": "radius", "update": "width / 2" },
@@ -56,8 +56,7 @@
       "range": { "signal": "[0, radius]" },
       "zero": true,
       "nice": false,
-      "domain": { "data": "filtered", "field": "Score" },
-      "domainMin": 0
+      "domain": [0, 100]
     },
     {
       "name": "color",
@@ -86,10 +85,10 @@
             "enter": {
               "interpolate": { "value": "linear-closed" },
               "x": {
-                "signal": "0.5 * scale('radial', datum.Score) * cos(scale('angular', datum.Metric))"
+                "signal": "0.45 * scale('radial', datum.Score) * cos(scale('angular', datum.Metric))"
               },
               "y": {
-                "signal": "0.5 * scale('radial', datum.Score) * sin(scale('angular', datum.Metric))"
+                "signal": "0.45 * scale('radial', datum.Score) * sin(scale('angular', datum.Metric))"
               },
               "stroke": { "scale": "color", "field": "State" },
               "strokeWidth": { "value": 2 },
@@ -105,16 +104,17 @@
           "encode": {
             "enter": {
               "x": {
-                "signal": "1.05 * 0.5 * scale('radial', datum.datum.Score) * cos(scale('angular', datum.datum.Metric))"
+                "signal": "1.05 * 0.45 * scale('radial', datum.datum.Score) * cos(scale('angular', datum.datum.Metric))"
               },
               "y": {
-                "signal": "1.05 * 0.5 * scale('radial', datum.datum.Score) * sin(scale('angular', datum.datum.Metric))"
+                "signal": "1.05 * 0.45 * scale('radial', datum.datum.Score) * sin(scale('angular', datum.datum.Metric))"
               },
               "text": { "signal": "datum.datum.Score" },
               "align": { "value": "center" },
               "baseline": { "value": "middle" },
               "fill": { "value": "black" },
-              "fontSize": { "value": 14 }
+              "fontSize": { "value": 14 },
+              "font": { "value": "Futura" }
             }
           }
         }
@@ -130,10 +130,10 @@
           "x": { "value": 0 },
           "y": { "value": 0 },
           "x2": {
-            "signal": "0.5 * radius * cos(scale('angular', datum.Metric))"
+            "signal": "0.45 * radius * cos(scale('angular', datum.Metric))"
           },
           "y2": {
-            "signal": "0.5 * radius * sin(scale('angular', datum.Metric))"
+            "signal": "0.45 * radius * sin(scale('angular', datum.Metric))"
           },
           "stroke": { "value": "lightgray" },
           "strokeWidth": { "value": 1 }
@@ -148,10 +148,10 @@
       "encode": {
         "enter": {
           "x": {
-            "signal": "0.55 * (radius -10) * cos(scale('angular', datum.Metric))"
+            "signal": "0.46 * (radius -10) * cos(scale('angular', datum.Metric))"
           },
           "y": {
-            "signal": "0.55 * (radius + 5) * sin(scale('angular', datum.Metric))"
+            "signal": "0.46 * (radius + 5) * sin(scale('angular', datum.Metric))"
           },
           "text": { "field": "Metric" },
           "align": [
@@ -170,8 +170,8 @@
             { "value": "bottom" }
           ],
           "fill": { "value": "black" },
-          "fontWeight": { "value": "bold" },
-          "fontSize": { "value": 16 }
+          "fontSize": { "value": 16 },
+          "font": { "value": "Futura" }
         }
       }
     },

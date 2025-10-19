@@ -1,3 +1,26 @@
+/* Arrow container for intro section */
+.intro-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;  /* space before the intro content */
+    font-family: "Futura";
+    color: #444;          /* soft dark color */
+    margin-top: -180px;
+}
+
+.intro-arrow span {
+    font-size: 28px;      /* arrow size */
+    line-height: 1;
+}
+
+.intro-arrow .arrow-text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,8 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px 40px;
-    gap: 50px;
-    background-color: white;
+    background-color: #f5f5f5;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,10 +46,39 @@ body {
 
 header {
     text-align: center;
-    font-size: 50px;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
+    font-size: 40px;
+    font-family: "Futura";
+    font-weight: 550;
+    flex: 1;
+    color: #444;    
 }
+
+.right-box {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    background-color: #6db7f2;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 10px 14px;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.right-box .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-box p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Futura";
+}
+
 
 .toolbar-container {
     position: fixed;
@@ -36,23 +87,24 @@ header {
     right: 0;
     background-color: #fff;
     padding: 12px 40px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Lato", Arial, sans-serif;
-    font-weight: 400;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-family: "Futura";
+    font-weight: 300;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.05); */
+    background-color: #f5f5f5;
 }
 
 .slider-container {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Futura";
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 300;
     color: #444;
     background: #f9f9f9;
     padding: 10px 16px;
@@ -141,7 +193,7 @@ select {
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    background-color: #f5f5f5;
     justify-content: center;
     scroll-snap-align: start;
     box-sizing: border-box;
@@ -152,7 +204,7 @@ select {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
-    font-family: "Lato", sans-serif;
+    font-family: "Futura";
     text-align: center;
     line-height: 1.6;
 }
@@ -160,13 +212,14 @@ select {
 .intro-container h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    font-weight: 900;
+    font-weight: 600;
+    color: #444;
 }
 
 .intro-container p {
     font-size: 20px;
-    color: #333;
-    font-weight: 400;
+    color: #444;
+    font-weight: 300;
 }
 
 
@@ -186,9 +239,10 @@ select {
 .map-title h2 {
     margin: 0;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Futura";
+    color: #444;
 }
 
 .map-container>#vg1 {
@@ -197,19 +251,20 @@ select {
 
 .map-container>.map-textbox {
     flex: 0 0 35%;
-    font-family: "Lato", sans-serif;
+    font-family: "Futura";
     border: 2px solid #ccc;
     padding: 5px;
+    color: #444;
 }
 
 .map-container>.map-textbox>h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .map-container>.map-textbox>p {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .heatmap-container {
@@ -228,18 +283,20 @@ select {
 .heatmap-title h2 {
     margin: 0;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Futura";
+    color: #444;
 }
 
 .heatmap-container>.heatmap-textbox {
     flex: 0 0 35%;
-    font-family: "Lato", sans-serif;
+    font-family: "Futura";
     border: 2px solid #ccc;
     padding: 5px;
     text-align: justify-all;
     font-size: 20px;
+    color: #444;
 }
 
 .heatmap-container>#vg2 {
@@ -248,12 +305,12 @@ select {
 
 .heatmap-container>.heatmap-textbox>h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .heatmap-container>.heatmap-textbox>p {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .section3-container {
@@ -276,19 +333,20 @@ select {
 
 .graph-textbox {
     margin-top: 15px;
-    font-family: "Lato", sans-serif;
+    font-family: "Futura";
     padding: 10px;
+    color: #444;
 }
 
 .graph-textbox h2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
     margin: 0 0 10px 0;
 }
 
 .graph-textbox p {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
     text-align: justify;
 }

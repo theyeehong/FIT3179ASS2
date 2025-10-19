@@ -1,8 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
+  "background": "#f5f5f5",
   "width": 900,
   "height": 550,
+  "config": {
+    "font": "Futura",
+    "title": {"font": "Futura"},
+    "axis": {"labelFont": "Futura", "titleFont": "Futura"},
+    "legend": {"labelFont": "Futura", "titleFont": "Futura"},
+    "view": {"stroke": "transparent"}
+  },
   "params": [
     {
       "name": "YearSelection",
@@ -107,7 +114,6 @@
       "mark": {
         "type": "text",
         "fontSize": 15,
-        "fontWeight": "bold",
         "color": "black"
       },
       "encoding": {

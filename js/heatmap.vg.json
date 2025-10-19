@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#f5f5f5",
   "width": 800,
   "height": 500,
   "params": [
@@ -76,6 +77,18 @@
     }
   ],
   "config": {
-    "axis": { "grid": true, "tickBand": "extent" }
+    "font": "Futura",
+    "title": { "font": "Futura" },
+    "axis": {
+      "grid": true,
+      "tickBand": "extent",
+      "labelFont": "Futura",
+      "titleFont": "Futura"
+    },
+    "legend": {
+      "labelFont": "Futura",
+      "titleFont": "Futura"
+    },
+    "view": { "stroke": "transparent" }
   }
 }

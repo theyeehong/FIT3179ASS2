@@ -14,13 +14,24 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Digital Inclusion Map</title>
+    <title>Digital Divide down Under</title>
 </head>
 
 <body>
 
     <div class="header-container">
         <header>Digital Divide down Under</header>
+        <div class="right-box">
+            <div class="column">
+                <p>By Teh Yee Hong</p>
+                <p>19 OCT 2025</p>
+            </div>
+            <div class="column">
+                <p>Data: Australia Bureau of Statistics</p>
+                <p>Australian Digital Inclusion Index</p>
+                <p>Natural Earth Data</p>
+            </div>
+        </div>
     </div>
 
     <div class="toolbar-container">
@@ -38,8 +49,11 @@
     </div>
 
     <div class="content">
-
         <section id="intro" class="section">
+            <div class="intro-arrow">
+                <span>⬆</span>
+                <span class="arrow-text">Global Filter</span>
+            </div>
             <div class="intro-container">
                 <h2>Understanding Digital Inclusion in Australia</h2>
                 <p>We are living in a digital era where internet access is essential for education, work, and daily
@@ -61,12 +75,15 @@
                     <div id="vg1"></div>
                 </div>
                 <div class="map-textbox">
-                    <h2>Digital Inclusion Across States</h2>
-                    <p>This choropleth map shows the Digital Inclusion Index by state and territory. Higher values
-                        indicate better access, affordability, and digital skills. The Australian Capital Territory
-                        consistently scores highest, while Northern Territory and Tasmania score lowest. Most regions
-                        show gradual improvement over time, but gaps remain, highlighting ongoing digital inequalities.
-                    </p>
+                    <h2>1. Digital Inclusion Across States</h2>
+                    <p>Not all Australians are equally connected to the digital world.
+                        This map shows that the Australian Capital Territory consistently 
+                        leads in digital inclusion index, while Tasmania and the Northern 
+                        Territory lag behind. Most regions are slowly improving, but persistent
+                        gaps highlight ongoing digital inequalities. Use the year slider to see 
+                        how these differences have evolved over time.</p>
+                    <br>
+                    <p><strong>Digital Inclusion Index (DGI)</strong><br>A score combining access, affordability and digital ability</p>
                 </div>
             </div>
         </section>
@@ -74,12 +91,13 @@
         <section id="section2" class="section">
             <div class="heatmap-container">
                 <div class="heatmap-textbox">
-                    <h2>Digital Inclusion Across Income Groups</h2>
-                    <p>This heatmap illustrates the state of digital inclusion in Australia over seven years, focusing
-                        on three key dimensions: Access, Affordability, and Digital Ability. Scores are broken down by
-                        income quintiles (Q1–Q5), where Q1 represents the lowest-income households and Q5 the highest.
-                        Access measures availability of internet and devices, Affordability reflects the cost of digital
-                        services relative to income, and Digital Ability captures digital skills and confidence.</p>
+                    <h2>2. Digital Inclusion Across Income Groups</h2>
+                    <p>Income matters when it comes to digital inclusion. This heatmap reveals how access,
+                        affordability, and digital ability differ across income groups (Q1–Q5) over seven
+                        years, where Q1 represents the lowest-income households and Q5 the highest. Lower-income
+                        households face bigger challenges in accessing devices and internet, and in developing 
+                        digital skills, while higher-income households enjoy more opportunities. Move through
+                        the years using the slider to see how gaps persist or narrow over time.</p>
                 </div>
                 <div class="heatmap-column">
                     <div class="heatmap-title">
@@ -94,24 +112,25 @@
             <div class="section3-container">
                 <div class="graph-container">
                     <div class="graph-textbox">
-                        <h2>Income Distribution per week by Quintile</h2>
-                        <p>This treemap visualizes how total income is distributed across different<br>
-                            income quintiles per week. Each rectangle represents a quintile, and<br>
-                            the size of the rectangle corresponds to the proportion of<br>
-                            total income earned by that group. It allows for easy comparison<br>
-                            between lower and higher income groups.</p>
+                        <h2>3. Income Distribution per week by Quintile</h2>
+                        <p>How is income spread across Australian households? This treemap<br> 
+                            shows the proportion of total income earned by each income quintile<br> 
+                            per week. Larger rectangles represent higher shares, revealing the<br> 
+                            stark differences between lower- and higher-income groups. Explore<br> 
+                            the chart to see which groups dominate income distribution and which<br>
+                            are left behind.</p>
                     </div>
                     <br>
                     <div id="vg3"></div>
                 </div>
                 <div class="graph-container">
                     <div class="graph-textbox">
-                        <h2>Composition of Main Income Sources</h2>
-                        <p>This doughnut chart shows the breakdown of households’ main sources<br>
-                            of income, such as employee income or government transfer.<br>
-                            Each slice represents the relative share of households relying on<br>
-                            that income source, making it simple to see which sources<br>
-                            are most prevalent.</p>
+                        <h2>4. Composition of Main Income Sources</h2>
+                        <p>Not all income is earned the same way. This doughnut chart breaks<br> 
+                            down households’ main sources of income, such as employee income<br> 
+                            or government transfers. Each slice shows the proportion of<br> 
+                            households relying on each source, helping us understand the<br> 
+                            diversity of income streams across Australia.</p>
                     </div>
                     <div id="vg5"></div>
                 </div>
@@ -122,27 +141,26 @@
             <div class="section3-container">
                 <div class="graph-container">
                     <div class="graph-textbox">
-                        <h2>Comparing Digital Inclusion Across States</h2>
-                        <p>This grouped bar chart highlights how each Australian state performs<br>
-                            across key digital inclusion metrics, such as Access, Affordability,<br>
-                            and Digital Ability. It allows a direct comparison of strengths<br>
-                            and weaknesses between states, revealing areas where certain regions<br>
-                            excel and others lag behind. For clarity, annotations are only shown<br>
-                            for Victoria, highlighting key scores in that state.
-                        </p>
+                        <h2>5. Comparing Digital Inclusion Across States</h2>
+                        <p>Some states are stronger than others in digital inclusion. This grouped<br> 
+                            bar chart shows how each state performs in access, affordability, and<br> 
+                            digital ability. Click on the legend to filter and compare states, or<br> 
+                            focus on Victoria to see key scores highlighted. This makes it easy to<br> 
+                            spot strengths, weaknesses, and opportunities for improvement across<br>
+                            the country. You can click on the legend to highlight certain states.</p>
                     </div>
                     <br>
                     <div id="vg6"></div>
                 </div>
                 <div class="graph-container">
                     <div class="graph-textbox">
-                        <h2>Australia’s Digital Inclusion Profile</h2>
-                        <p>This radar chart presents Australia’s overall performance across the<br>
-                            three key dimensions of digital inclusion: Access, Affordability,<br>
-                            and Digital Ability. It provides a clear snapshot of strengths<br>
-                            and areas for improvement at the national level, highlighting how<br>
-                            well Australians are connected, able to afford digital services, and<br>
-                            equipped with the skills to participate in the digital world.</p>
+                        <h2>6. Australia’s Digital Inclusion Profile</h2>
+                        <p>Finally, let’s look at Australia as a whole. This radar chart<br> 
+                            summarizes national performance across access, affordability,<br> 
+                            and digital ability. It shows where Australians excel and where gaps<br>
+                            remain, providing a clear snapshot of the country’s digital inclusion<br> 
+                            strengths and challenges. Use this overview to reflect on where efforts<br> 
+                            could make the biggest impact.</p>
                     </div>
                     <div id="vg4"></div>
                 </div>
